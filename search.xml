@@ -3,13 +3,61 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2018/12/17/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8/"/>
-      <url>/2018/12/17/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8/</url>
+      <title>AnguularJS学习笔记——数据绑定</title>
+      <link href="/2018/12/20/AnguularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/"/>
+      <url>/2018/12/20/AnguularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</url>
       
-        <content type="html"><![CDATA[<h1 id="AngularJS学习笔记（一）入门"><a href="#AngularJS学习笔记（一）入门" class="headerlink" title="AngularJS学习笔记（一）入门"></a>AngularJS学习笔记（一）入门</h1><hr><p>tags: AngularJS</p><hr><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="1、起源"><a href="#1、起源" class="headerlink" title="1、起源"></a>1、起源</h3><p>AngularJS是由 Misko Hevery 和 Adam Abrons 二人开发的。二人发现现有的工具（例如JQuery）很难构建出需要显示大量复杂数据的浏览器用户界面（User Interface UI），处于此目的，AngularJS横空出世，但后来被Google所收购。作为一款优秀的前端JS框架，AngularJS有着诸多特性，例如MVC（Moodel-View-Controller)、双向数据绑定、指令系统、模块化设计等等</p><h3 id="2、四大特性"><a href="#2、四大特性" class="headerlink" title="2、四大特性"></a>2、四大特性</h3><p>1-MVC<br>MVC全名：Modle View Controller是1979年Trygve Reenskaug提出的架构模式。<br>其中的Modle（模型）是应用程序的核心，是应用程序中用于处理应用程序数据逻辑部分的模块。View（视图）负责显示数据，是应用程序中处理数据显示的模块。Controller（控制器）是应用程序中处理用户交互的部分，通常负责从视图读取数据，用户控制输入并向模型发送数据。使用MVC分层有助于管理复杂的应用程序，因为可以在一个时间内专门关注一个方面。例如，可以在不依赖业务逻辑的情况下专注于视图设计。同时也让应用程序的测试更加容易。MVC分层同时也简化了分组开发。不同的开发人员可同时开发视图、控制器逻辑和业务逻辑。<br>为什么需要MVC？<br>首先，代码规模越来越大，切分职责是大势所趋；为了实现代码的复用，其实很多代码的逻辑或算法都很相似，这就使得一段代码可以在多处使用而避免了再次重复开发；为了后期维护方便，使得代码的可维护性提高；减低代码之间的耦合性，使得程序的灵活性增强；当然使用MVC只是一种架构手段，其最终的目标是为了实现模块化和复用。</p><p>2-双向数据绑定<br>在许多较老的JavaScript库（例如JQuery和Backbone）中，我们需要自己操作文档对象模型（DocumentObject Model，DOM）。换句话说，如果希望改变div元素的HTML内容，需要自己编写必需的Javascript。<br>例如：</p><pre><code>$(&#39;div&#39;).html(&#39;Hello,world&#39;);</code></pre><p>但是AngularJS反转了这个模式，使HTML成为如何显示数据的明确来源。双向数据绑定的主要目的是将HTML或CSS属性（例如，div元素的HTML内容或背景颜色）绑定到JavaScript变量的值。当JavaScript变量的值改变时，HTML或CSS属性将随之更新。反之亦然：如果用户在Input字段中输入，被绑定的JavaScript变量的值将被更新为用户输入的内容。<br>例如，下面的HTML将问候输入字段中输入的名字：</p><pre><code>&lt;input type=&quot;text&quot; ng-model=&quot;user&quot; placeholder=&quot;your name&quot;&gt;  &lt;h3&gt;Hello,{{user}}!&lt;/h3&gt;</code></pre><p>在这里不需要使用JavaScript！指令ngModel和将完成所有的工作。</p><p>3-指令系统<br>指令是将HTML和JavaScript功能组装成一个可轻松重用的包的强大工具。AngularJS拥有大量内建指令（例如ngModel和ngController），通过他们可以在HTML中访问复杂的JavaScript功能。更有意思的是，你可以编写自己的自定义指令。</p><p>4-模块化和DOM作用域<br>DOM作用域和模块化是AngularJS另一强大的特性。其实真正意义上来讲数据绑定并不是说完全消除了代码的复杂性，这就好比传统的物理学观点能量守恒一样，能量不可能凭空消失，也不可能凭空产生。代码也是一样，在此处削减了代码的复杂性，必然会在某处去产生另外的代码。也就是说，代码复杂性会被转移。不过，AngularJS允许在DOM中创建作用域，他的行为类似JavaScript和其他编程语言中的作用域。它允许我们把HTML和JavaScript分割成独立、可重用的块。</p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>【1】Valeri Karpov,Diego Netto.Professional AngularJS[M]<br>【2】菜鸟教程. AngularJS教程[EB/OL]. <a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/angularjs/angularjs-tutorial.html</a>. 2018.11.1</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    <entry>
+      <title>AngularJS学习笔记———Scope（作用域）</title>
+      <link href="/2018/12/20/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/"/>
+      <url>/2018/12/20/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>其实对于学过JSP和JavaScript的程序员来说，对于Scope作用域这个概念应该并不会感到陌生。这里我们再来复习和巩固一遍JavaBean的作用域：</p><ol><li>JavaBean的application作用域：<br><em>将javaBean的scope属性主设为application，则该javaBean的作用域和application内置对象<br>的作用域一样。可以访问同一个服务器的用户的全局信息。<br>创建application的javaBean的对象后，该javaBean将一直保存在服务器的内存空间中，随时<br>可以为用户处理请求，直到服务器关闭，该javaBean对像才被释放。<br>依据这个特点可以用来记录页面的访问量。</em></li><li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li><li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li><li>javaBean的page作用域：</li></ol><ul><li>默认的scope值；<br>作用域范围最小，创立的对象只能在当前的jsp程序中使用，客户端请求执行完后，javaBean<br>对象会立即注销。*</li></ul><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>【1】Valeri Karpov,Diego Netto.Professional AngularJS[M]</p><p>【2】菜鸟教程. AngularJS教程[EB/OL]. <a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/angularjs/angularjs-tutorial.html</a>. 2018.11.1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AngularJS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>AngularJS学习笔记（一）入门</title>
+      <link href="/2018/09/07/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8/"/>
+      <url>/2018/09/07/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="1、起源"><a href="#1、起源" class="headerlink" title="1、起源"></a>1、起源</h3><p>AngularJS是由 Misko Hevery 和 Adam Abrons 二人开发的。二人发现现有的工具（例如JQuery）很难构建出需要显示大量复杂数据的浏览器用户界面（User Interface UI），处于此目的，AngularJS横空出世，但后来被Google所收购。作为一款优秀的前端JS框架，AngularJS有着诸多特性，例如MVC（Moodel-View-Controller)、双向数据绑定、指令系统、模块化设计等等</p><h3 id="2、四大特性"><a href="#2、四大特性" class="headerlink" title="2、四大特性"></a>2、四大特性</h3><p>1-MVC<br>MVC全名：Modle View Controller是1979年Trygve Reenskaug提出的架构模式。<br>其中的Modle（模型）是应用程序的核心，是应用程序中用于处理应用程序数据逻辑部分的模块。View（视图）负责显示数据，是应用程序中处理数据显示的模块。Controller（控制器）是应用程序中处理用户交互的部分，通常负责从视图读取数据，用户控制输入并向模型发送数据。使用MVC分层有助于管理复杂的应用程序，因为可以在一个时间内专门关注一个方面。例如，可以在不依赖业务逻辑的情况下专注于视图设计。同时也让应用程序的测试更加容易。MVC分层同时也简化了分组开发。不同的开发人员可同时开发视图、控制器逻辑和业务逻辑。<br>为什么需要MVC？<br>首先，代码规模越来越大，切分职责是大势所趋；为了实现代码的复用，其实很多代码的逻辑或算法都很相似，这就使得一段代码可以在多处使用而避免了再次重复开发；为了后期维护方便，使得代码的可维护性提高；减低代码之间的耦合性，使得程序的灵活性增强；当然使用MVC只是一种架构手段，其最终的目标是为了实现模块化和复用。</p><p>2-双向数据绑定<br>在许多较老的JavaScript库（例如JQuery和Backbone）中，我们需要自己操作文档对象模型（DocumentObject Model，DOM）。换句话说，如果希望改变div元素的HTML内容，需要自己编写必需的Javascript。<br>例如：</p><pre><code>$(&#39;div&#39;).html(&#39;Hello,world&#39;);</code></pre><p>但是AngularJS反转了这个模式，使HTML成为如何显示数据的明确来源。双向数据绑定的主要目的是将HTML或CSS属性（例如，div元素的HTML内容或背景颜色）绑定到JavaScript变量的值。当JavaScript变量的值改变时，HTML或CSS属性将随之更新。反之亦然：如果用户在Input字段中输入，被绑定的JavaScript变量的值将被更新为用户输入的内容。<br>例如，下面的HTML将问候输入字段中输入的名字：</p><pre><code>&lt;input type=&quot;text&quot; ng-model=&quot;user&quot; placeholder=&quot;your name&quot;&gt;  &lt;h3&gt;Hello,{{user}}!&lt;/h3&gt;</code></pre><p>在这里不需要使用JavaScript！指令ngModel和将完成所有的工作。</p><p>3-指令系统<br>指令是将HTML和JavaScript功能组装成一个可轻松重用的包的强大工具。AngularJS拥有大量内建指令（例如ngModel和ngController），通过他们可以在HTML中访问复杂的JavaScript功能。更有意思的是，你可以编写自己的自定义指令。</p><p>4-模块化和DOM作用域<br>DOM作用域和模块化是AngularJS另一强大的特性。其实真正意义上来讲数据绑定并不是说完全消除了代码的复杂性，这就好比传统的物理学观点能量守恒一样，能量不可能凭空消失，也不可能凭空产生。代码也是一样，在此处削减了代码的复杂性，必然会在某处去产生另外的代码。也就是说，代码复杂性会被转移。不过，AngularJS允许在DOM中创建作用域，他的行为类似JavaScript和其他编程语言中的作用域。它允许我们把HTML和JavaScript分割成独立、可重用的块。</p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>【1】Valeri Karpov,Diego Netto.Professional AngularJS[M]<br>【2】菜鸟教程. AngularJS教程[EB/OL]. <a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/angularjs/angularjs-tutorial.html</a>. 2018.11.1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AngularJS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> AngularJS </tag>
+            
+        </tags>
       
     </entry>
     
