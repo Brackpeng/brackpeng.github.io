@@ -5,8 +5,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="AnguularJS学习笔记——数据绑定, Brack">
-    <meta name="description" content="AnguularJS学习笔记——数据绑定 | Brack">
+    <meta name="keywords" content="AngularJS学习笔记——Scope（作用域）, Brack">
+    <meta name="description" content="其实对于学过JSP和JavaScript的程序员来说，对于Scope作用域这个概念应该并不会感到陌生。这里我们再来复习和巩固一遍JavaBean的作用域：
+
+JavaBean的application作用域：将javaBean的scope属性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>AnguularJS学习笔记——数据绑定 | Brack</title>
+    <title>AngularJS学习笔记——Scope（作用域） | Brack</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -248,13 +250,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        AnguularJS学习笔记——数据绑定
+                        AngularJS学习笔记——Scope（作用域）
                     </div>
                 </div>
             </div>
@@ -272,18 +274,53 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/JavaScript/" target="_blank">
+                    <span class="chip bg-color">JavaScript</span>
+                </a>
+                
+                <a href="/tags/AngularJS/" target="_blank">
+                    <span class="chip bg-color">AngularJS</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/AngularJS/" class="post-category" target="_blank">
+                        AngularJS
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-20
+                    <i class="fa fa-clock-o fa-fw"></i>2018-09-13
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>其实对于学过JSP和JavaScript的程序员来说，对于Scope作用域这个概念应该并不会感到陌生。这里我们再来复习和巩固一遍JavaBean的作用域：</p>
+<ol>
+<li>JavaBean的application作用域：<br><em>将javaBean的scope属性主设为application，则该javaBean的作用域和application内置对象<br>的作用域一样。可以访问同一个服务器的用户的全局信息。<br>创建application的javaBean的对象后，该javaBean将一直保存在服务器的内存空间中，随时<br>可以为用户处理请求，直到服务器关闭，该javaBean对像才被释放。<br>依据这个特点可以用来记录页面的访问量。
+</em></li>
+<li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li>
+<li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li>
+<li>javaBean的page作用域：</li>
+</ol>
+<ul>
+<li>默认的scope值；<br>作用域范围最小，创立的对象只能在当前的jsp程序中使用，客户端请求执行完后，javaBean<br>对象会立即注销。*</li>
+</ul>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>【1】Valeri Karpov,Diego Netto.Professional AngularJS[M]</p>
+<p>【2】菜鸟教程. AngularJS教程[EB/OL]. <a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/angularjs/angularjs-tutorial.html</a>. 2018.11.1</p>
+
             </div>
             <hr>
 
@@ -421,7 +458,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="https://github.com/Brackpeng" class="b-link-green">Brack</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/20/AnguularJS学习笔记——数据绑定/" class="b-link-green">AnguularJS学习笔记——数据绑定</a>
+                    <a href="/2018/09/13/AngularJS学习笔记———Scope（作用域）/" class="b-link-green">AngularJS学习笔记——Scope（作用域）</a>
                 </p>
             </div>
         </div>
@@ -440,7 +477,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Thu Dec 20 2018 16:45:17 GMT+0800',
+    id: 'Thu Sep 13 2018 00:00:00 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -489,45 +526,13 @@ gitment.render('gitment-content');
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2018/12/20/AnguularJS学习笔记——数据绑定/">
+                <a href="/2018/09/13/AngularJS学习笔记———Scope（作用域）/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="AnguularJS学习笔记——数据绑定">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="AngularJS学习笔记——Scope（作用域）">
                         
-                        <span class="card-title">AnguularJS学习笔记——数据绑定</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary"></div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            Brack Peng
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
-            <div class="card">
-                <a href="/2018/12/20/AngularJS学习笔记———Scope（作用域）/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="AngularJS学习笔记———Scope（作用域）">
-                        
-                        <span class="card-title">AngularJS学习笔记———Scope（作用域）</span>
+                        <span class="card-title">AngularJS学习笔记——Scope（作用域）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -536,14 +541,61 @@ gitment.render('gitment-content');
 JavaBean的application作用域：将javaBean的scope属性</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/前端/" class="post-category" target="_blank">
-                                    前端
+                            <a href="/categories/AngularJS/" class="post-category" target="_blank">
+                                    AngularJS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/" target="_blank">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/AngularJS/" target="_blank">
+                        <span class="chip bg-color">AngularJS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/2018/09/07/AngularJS学习笔记（一）入门/">
+                    <div class="card-image">
+                        
+                        <img src="/source/images/angularjs1.jpg" class="responsive-img" alt="AngularJS学习笔记（一）入门">
+                        
+                        <span class="card-title">AngularJS学习笔记（一）入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">简介1、起源AngularJS是由 Misko Hevery 和 Adam Abrons 二人开发的。二人发现现有的工具（例如JQuery）很难构建出需要显示大量复杂数据的浏览器用户界面（User Interface UI），处于此目的，A</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/AngularJS/" class="post-category" target="_blank">
+                                    AngularJS
                                 </a>
                             
                             
@@ -552,6 +604,10 @@ JavaBean的application作用域：将javaBean的scope属性</div>
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/" target="_blank">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
                     
                     <a href="/tags/AngularJS/" target="_blank">
                         <span class="chip bg-color">AngularJS</span>

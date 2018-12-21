@@ -3,32 +3,23 @@
   
     
     <entry>
-      <title>AnguularJS学习笔记——数据绑定</title>
-      <link href="/2018/12/20/AnguularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/"/>
-      <url>/2018/12/20/AnguularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
-      <title>AngularJS学习笔记———Scope（作用域）</title>
-      <link href="/2018/12/20/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/"/>
-      <url>/2018/12/20/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/</url>
+      <title>AngularJS学习笔记——Scope（作用域）</title>
+      <link href="/2018/09/13/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/"/>
+      <url>/2018/09/13/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E2%80%94Scope%EF%BC%88%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89/</url>
       
         <content type="html"><![CDATA[<p>其实对于学过JSP和JavaScript的程序员来说，对于Scope作用域这个概念应该并不会感到陌生。这里我们再来复习和巩固一遍JavaBean的作用域：</p><ol><li>JavaBean的application作用域：<br><em>将javaBean的scope属性主设为application，则该javaBean的作用域和application内置对象<br>的作用域一样。可以访问同一个服务器的用户的全局信息。<br>创建application的javaBean的对象后，该javaBean将一直保存在服务器的内存空间中，随时<br>可以为用户处理请求，直到服务器关闭，该javaBean对像才被释放。<br>依据这个特点可以用来记录页面的访问量。</em></li><li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li><li>JavaBean的session作用域:<br><em>对应一次对话过程，从用户第一次访问服务器到断开为止。用户第一次访问是创建对象，后<br>访问该网站的其他程序是，如果还用到javaBean，此时不需要创建对象。</em></li><li>javaBean的page作用域：</li></ol><ul><li>默认的scope值；<br>作用域范围最小，创立的对象只能在当前的jsp程序中使用，客户端请求执行完后，javaBean<br>对象会立即注销。*</li></ul><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>【1】Valeri Karpov,Diego Netto.Professional AngularJS[M]</p><p>【2】菜鸟教程. AngularJS教程[EB/OL]. <a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/angularjs/angularjs-tutorial.html</a>. 2018.11.1</p>]]></content>
       
       
       <categories>
           
-          <category> 前端 </category>
+          <category> AngularJS </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> JavaScript </tag>
             
             <tag> AngularJS </tag>
             
